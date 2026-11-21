@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Calculator</title>
+<style>
+body{font-family:Arial;background:#fff7ed;padding:25px}
+main{max-width:450px;margin:40px auto;background:white;padding:30px;border-radius:16px}
+input{width:100%;padding:13px;margin:10px 0;box-sizing:border-box;border:1px solid #fdba74;border-radius:8px}
+button{width:100%;background:#ea580c;color:white;padding:14px;border:0;border-radius:8px;cursor:pointer}
+#result{background:#ffedd5;padding:20px;margin-top:20px;border-radius:10px;white-space:pre-line;line-height:2}
+</style>
+</head>
+<body>
+<main>
+<h1>Discount Calculator</h1>
+<p>Calculate your savings before shopping.</p>
+<label>Original Price</label>
+<input id="price" type="number" placeholder="Enter price">
+<label>Discount Percentage</label>
+<input id="discount" type="number" min="0" max="100" placeholder="Enter discount">
+<button onclick="calculate()">Calculate Discount</button>
+<div id="result">Your result will appear here.</div>
+</main>
+<script>
+function calculate(){
+ const price=document.getElementById("price");
+ const discount=document.getElementById("discount");
+ const p=Number(price.value);
+ const d=Number(discount.value);
+ const output=document.getElementById("result");
+ if(price.value===""||discount.value===""||p<0||d<0||d>100){
+  output.textContent="Enter valid price and discount.";
+  return;
+ }
+ const savings=p*d/100;
+ output.textContent="Original Price: "+p.toFixed(2)+
+ "\nYou Save: "+savings.toFixed(2)+
+ "\nFinal Price: "+(p-savings).toFixed(2);
+}
+</script>
+</body>
+</html>
