@@ -1,23 +1,27 @@
-# Discount Calculator
+## Discount Calculation Guide
 
-A shopping utility for calculating discounted prices.
+This application helps users calculate
+discounted product prices.
 
-## Features
+### Calculation Inputs
 
-- Original price input
+- Original product price
 - Discount percentage
-- Savings calculation
 
-## How to Use
+### Calculation Results
 
-Enter the original price and discount percentage.
+- Discount amount
+- Final price
+- Total savings
 
-## Technologies
+### How to Use
 
-- HTML
-- CSS
-- JavaScript
+1. Enter the original price.
+2. Enter the discount percentage.
+3. Calculate the discounted price.
+4. Review the savings.
 
-## Running Locally
+### Validation
 
-Open `index.html` in a modern web browser.
+Ensure that prices are positive
+and discount percentages are valid.
