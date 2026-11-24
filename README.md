@@ -25,3 +25,12 @@ discounted product prices.
 
 Ensure that prices are positive
 and discount percentages are valid.
+## Manual Testing Checklist
+
+- [ ] Calculate a ten-percent discount on a known price.
+- [ ] Verify the savings and final price add to the original.
+- [ ] Test zero-percent and full-price discounts.
+
+### Test Notes
+
+Record the observed result and any reproducible issue after running the tests.
